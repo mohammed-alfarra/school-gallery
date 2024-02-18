@@ -46,6 +46,16 @@ class Controller extends BaseController
     }
 
     /**
+     * Return a deleted response.
+     *
+     * @return JsonResponse Deleted JSON response.
+     */
+    public function responseDeleted(): JsonResponse
+    {
+        return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+    }
+
+    /**
      * Return a conflict error response.
      *
      * @param  string  $details Optional error details.
